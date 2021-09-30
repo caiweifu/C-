@@ -1,3 +1,4 @@
+//枚举法
 #include<stdio.h>
 int main()
 {
@@ -22,4 +23,21 @@ int main()
 			}
 		}
 	printf("%d和%d的最大公约数为%d", a, b, ret);
+}
+//辗转相除法
+#include<stdio.h>
+int main()
+{
+	int a, b;
+	int t;
+	int ret;
+	scanf_s("%d%d", &a, &b);
+	while (b > 0)
+	{
+		t = a % b;
+		a = b;
+		b = t;
+	}
+	ret = a;
+	printf("最大公约数为%d",  ret);
 }
