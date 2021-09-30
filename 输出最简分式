@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	int dividend, divisor;
+	scanf_s("%d/%d", &dividend, &divisor);
+		int a = dividend;
+		int b = divisor;
+		int t;
+		while (b > 0)
+		{
+			t = a % b;
+			a = b;
+			b = t;
+		}
+		//a=6,b=8->t=6,a=8,b=6->t=2,a=6,b=2->t=0,a=2,b=0.
+		//辗转相除法求最大公约数
+		printf("%d/%d", dividend / a, divisor / a);
+	return 0;
+}
