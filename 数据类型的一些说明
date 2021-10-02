@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int a;
+	float b;//float有效数字为七位
+	double c;//double有效数字为十五位
+	//赋值时也可以用1e3来进行赋值
+	scanf_s("%d", &a);
+	scanf_s("%f", &b);
+	scanf_s("%lf", &c);
+	printf("%d\n", a);
+	printf("%E\n", b);//%e科学计数法(E指数的e换成了大写字母仅此而已)
+	printf("%f", c);//。16f在小数点后输出11位小数此时的输出是四舍五入的
+	return 0;
+}
+//inf :无穷大
+//nan: 不存在
+//带小数点的字面量是double而非float
+//float需要用f或F后缀来表明身份
+//计算机中判断浮点数是否相等不能直接用f1==f2来判断
+//判断浮点数是否相等 ：fabs（f1-f2）<1e-12
+//fabs:绝对值
+//char 输出类型可以是%d也可以为%c
