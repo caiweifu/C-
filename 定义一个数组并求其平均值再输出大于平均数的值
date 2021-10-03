@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+	int number[100];
+	int x;
+	int sum = 0;
+	int cnt = 0;
+	scanf_s("%d", &x);
+	while (x != 0)
+	{
+		number[cnt] = x;
+		sum += x;
+		cnt++;
+	}
+	if (cnt > 0)
+	{
+		printf("%d\n", sum / cnt);
+	}
+	int i;
+	for (i = 0; i < cnt; i++)
+	{
+		if (number[i] > sum / cnt)
+		{
+			printf("%d ", number[i]);
+		}
+	}
+
+
+}
+
+
